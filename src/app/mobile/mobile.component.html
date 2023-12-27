@@ -1,0 +1,38 @@
+<div class="navbar">
+    <img src="assets/royal-bank-o.png">
+</div>
+<div class="container">
+    <div class="card">
+        <h2>Update {{currentFormData.lable3}}</h2>
+        <form class="bank-form">
+
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="accountNo">Customer Id:</label>
+            <input type="text" id="accountNo" name="accountNo" required>
+
+            <label for="oldMobile">Current {{currentFormData.lable3}}:</label>
+            <input type="tel" id="oldMobile" name="oldMobile" required>
+
+            <label for="newMobile">New {{currentFormData.lable3}}:</label>
+            <input type="tel" id="newMobile" name="newMobile" required>
+
+            <label class="p">The Above details get updated in all Acounts.</label>
+            <div class="btn">
+                <input type="submit" value="Update">
+                <input type="button" value="Help..?" (click)="help()">
+            </div>
+        </form>
+    </div>
+    <div class="cobrowse-code-popup" id="myModal">
+        <div class="popup-container">
+            <div class="cobrowse-popup-header"><span>Start Co-browse</span><button class="x-btn"
+                    (click)="close()"></button></div>
+            <div class="cobrowse-popup-body">
+                <p class="cobrowse-popup-info">Share this cobrowse code with the support team for screen access.</p>
+                <h3 class="cobrowse-popup-code">{{ShareCode}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
