@@ -15,7 +15,6 @@ CobrowseIO.start()
 export class MobileComponent implements OnInit {
 
   lable:string[]=['lable3']
-  // title:string='';
   currentRoute!:String
   currentFormData:any
   currentForm:any={ 
@@ -23,25 +22,12 @@ export class MobileComponent implements OnInit {
     email:{ lable3:'Email Id'},
     address:{ lable3:'Residential Address'}
 };
-
-
   constructor(private route: Router) { }
-
-
   ngOnInit(): void {
    this.currentRoute=this.route.url;
    let path=this.currentRoute.split("/")[1]
    this.currentFormData=this.currentForm[path]
   }
-
-
-
-
-
-
-
-
-
 
 
   
